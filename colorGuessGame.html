@@ -8,6 +8,10 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="colorGuessGame.css" />
   </head>
   <body>
@@ -17,8 +21,41 @@
         <P class="text-center" id="rbgColor"></P>
       </div>
     </div>
-    <div class="menu col-md-6 col-sm-12 mx-auto">
-      <div class="row">
+    <nav class="menu navbar navbar-expand-md navbar-light bg-light">
+      <a class="navbar-brand mx-auto" href="#" id="status"></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarToggler"
+        aria-controls="navbarToggler"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="sub-menu collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav mr-auto mt-lg-0">
+          <li class="nav-item active">
+            <a
+              class="nav-link mr-6"
+              href="#"
+              id="gameStatus"
+              onclick="reset()"
+            ></a>
+          </li>
+          <li class="nav-item mr-6">
+            <a class="nav-link" href="#" onclick="easyMode()">EASY</a>
+          </li>
+          <li class="nav-item mr-6">
+            <a class="nav-link" href="#" id="hard">HARD</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- <div class="menu">
+      <div class="sub-menu row mx-auto">
         <div class="col-sm cursor" id="gameStatus" onclick="reset()"></div>
         <div class="col-sm" id="status"></div>
         <div class="col-sm">
@@ -28,7 +65,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div id="container">
       <div class="gameBoard">
         <div class="row" id="firstRow">
@@ -43,21 +80,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="jumbotron">
-      <div class="text-center">
-        <h1>Color Guessing Game</h1>
-        <P class="text-center" id="rbgColor"></P>
-      </div>
-    </div>
-
-    <div id="container">
-      <div class="color-grid2"></div>
-      <div class="color-grid2"></div>
-      <div class="color-grid2"></div>
-      <div class="color-grid2"></div>
-      <div class="color-grid2"></div>
-      <div class="color-grid2"></div>
-    </div> -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

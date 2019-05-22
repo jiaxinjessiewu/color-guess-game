@@ -6,6 +6,16 @@ var rgbArray = [];
 var win = false;
 // var colorGrid = document.querySelectorAll("div .color-grid");
 var colorGrid = document.getElementsByClassName("color-grid");
+
+hardMode.addEventListener("click", function() {
+  if (!hard) {
+    hard = true;
+    easy = false;
+    $("#secondRow").show();
+    reset();
+  }
+});
+
 for (var i = 0; i < colorGrid.length; i++) {
   colorGrid[i].addEventListener("click", function(element) {
     if (!win) {
@@ -22,15 +32,6 @@ for (var i = 0; i < colorGrid.length; i++) {
     }
   });
 }
-
-hardMode.addEventListener("click", function() {
-  if (!hard) {
-    hard = true;
-    easy = false;
-    $("#secondRow").show();
-    reset();
-  }
-});
 
 function easyMode() {
   if (!easy) {
@@ -74,13 +75,11 @@ function reset() {
     ", " +
     rbgAnswer.blue +
     ")";
-  $("#status").text("");
+  $("#status").text("Click To Play");
   $("#gameStatus").text("NEW COLOR");
   document.querySelector(".jumbotron").style.backgroundColor = "steelblue";
   buildGrid();
 }
-
-reset();
 
 function buildGrid() {
   var firstRow = document.getElementById("firstRow");
@@ -103,15 +102,6 @@ function formatColor(color) {
   return "rgb(" + color.red + ", " + color.green + ", " + color.blue + ")";
 }
 
-function unableClick() {
-  console.log("unab");
-  for (var i = 0; i < colorGrid.length; i++) {
-    colorGrid[i].removeEventListener("click", function() {
-      console.log("ss");
-    });
-  }
-}
-
 function winGame() {
   var firstRow = document.getElementById("firstRow");
   var grid = firstRow.getElementsByTagName("div");
@@ -131,3 +121,5 @@ function winGame() {
     rbgAnswer
   );
 }
+
+reset();
