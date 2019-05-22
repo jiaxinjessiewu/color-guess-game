@@ -1,0 +1,49 @@
+body {
+  background-color: #232323;
+  margin: 0;
+  font-family: "Montserrat", "Avenir";
+}
+#container {
+}
+.menu div {
+  background-color: white;
+  color: steelblue;
+}
+.jumbotron {
+  color: white;
+  background: steelblue;
+  transition: background 0.6s;
+  -webkit-transition: background 0.6s;
+  -moz-transition: background 0.6s;
+}
+/* .color-grid {
+  height: 100px;
+  color: red;
+  font-size: 24px;
+  text-align: center;
+  padding: 2rem 1rem;
+} */
+
+#rbgColor {
+  font-size: 30px;
+}
+.cursor {
+  cursor: pointer;
+}
+
+#container {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.color-grid {
+  width: 30%;
+  padding-bottom: 30%;
+  background: purple;
+  float: left;
+  margin: 1.66%;
+  border-radius: 15%;
+  transition: background 0.6s;
+  -webkit-transition: background 0.6s;
+  -moz-transition: background 0.6s;
+}
