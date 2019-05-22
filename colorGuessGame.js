@@ -56,12 +56,7 @@ function getRandomRGB() {
 function reset() {
   win = false;
   rgbArray = [];
-  var max = 0;
-  if (hard) {
-    max = 6;
-  } else {
-    max = 3;
-  }
+  var max = hard ? 6 : 3;
   for (var i = 0; i < max; i++) {
     rgbArray.push(getRandomRGB());
   }
