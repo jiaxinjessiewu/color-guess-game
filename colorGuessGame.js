@@ -22,6 +22,7 @@ for (var i = 0; i < colorGrid.length; i++) {
       var color = element.target.style.backgroundColor;
       if (color == formatColor(rbgAnswer)) {
         win = true;
+        // document.getElementsByClassName("color-grid").textContent
         $("#status").text("CORRECT");
         $("#gameStatus").text("PLAY AGAIN?");
         winGame();
